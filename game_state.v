@@ -4,7 +4,7 @@ module game_state(
 	output reg [1:0] game_state
 	);
 	
-	reg [3:0] win = 4'b1011;
+	reg [3:0] win = 4'b0101; //No. of goals to win
 
 	always @ (posedge clk)
 	begin

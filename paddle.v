@@ -1,5 +1,5 @@
 module paddle(
-	input clk,reset, 
+	input clk_1ms,reset, 
 	input button, button1, button2, button3,
 	input [9:0] x, y,
 	output paddle1_on,paddle2_on,
@@ -19,7 +19,7 @@ module paddle(
 	localparam L_position = 20;
 	localparam R_position = 20;
 		
-	always @ (posedge clk)
+	always @ (posedge clk_1ms)
 	begin
 		if(!reset)
 		begin	
@@ -54,6 +54,6 @@ module paddle(
 	
 	assign paddle2_on = (x >= x_paddle2-(paddlewidth/2) && x <= x_paddle2+(paddlewidth/2) && y >= y_paddle2-(paddleheight/2) && y < y_paddle2+(paddleheight/2))?1:0;
 
-	assign rgb_paddle2 = 12'b000000001111;
+	assign rgb_paddle2 = 12'b000000001111; //orange =12'bb111101110000
 	
 endmodule
