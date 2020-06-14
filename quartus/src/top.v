@@ -1,31 +1,21 @@
-//Limits might get cut sometimes. If that happens click on Auto Adjust.
 `include "vgaHdmi.v"
 `include "i2c/I2C_HDMI_Config.v"
 module top (
 	input clk, reset, button, button1, button2, button3,
-	
-	//------\/---\/---\/---\/---\/---\/---\/---\/---\/---\/
-	//HDMI
-	// AUDIO
-	// SPDIF va desconectado
-	output HDMI_I2S0,  // dont care, no se usan
-	output HDMI_MCLK,  // dont care, no se usan
-	output HDMI_LRCLK, // dont care, no se usan
-	output HDMI_SCLK,   // dont care, no se usan
-	// VIDEO
-	output [23:0] HDMI_TX_D, // RGBchannel
-	output HDMI_TX_VS,  // vsync
-	output HDMI_TX_HS,  // hsync
-	output HDMI_TX_DE,  // dataEnable
-	output HDMI_TX_CLK, // vgaClock
-	// REGISTERS AND CONFIG LOGIC
-	// HPD viene del conector
+
+	output HDMI_I2S0,  
+	output HDMI_MCLK,  
+	output HDMI_LRCLK, 
+	output HDMI_SCLK,   
+	output [23:0] HDMI_TX_D, 
+	output HDMI_TX_VS,  
+	output HDMI_TX_HS, 
+	output HDMI_TX_DE, 
+	output HDMI_TX_CLK, 
 	input HDMI_TX_INT,
-	inout HDMI_I2C_SDA,  // HDMI i2c data
-	output HDMI_I2C_SCL, // HDMI i2c clock
-	output READY        // HDMI is ready signal from i2c module
-	//------/\---/\---/\---/\---/\---/\---/\---/\---/\---/\
-	
+	inout HDMI_I2C_SDA,  
+	output HDMI_I2C_SCL,
+	output READY        
 	);
 	
 	
@@ -38,19 +28,16 @@ module top (
 	wire [3:0] p1_score, p2_score;
 	wire [1:0] game_state;
 	
-	//------\/---\/---\/---\/---\/---\/---\/---\/---\/---\/
 	assign HDMI_I2S0  = 1'b z;
 	assign HDMI_MCLK  = 1'b z;
 	assign HDMI_LRCLK = 1'b z;
 	assign HDMI_SCLK  = 1'b z;
-	//------/\---/\---/\---/\---/\---/\---/\---/\---/\---/\
 	
 
-	//------\/---\/---\/---\/---\/---\/---\/---\/---\/---\/
 	wire clock25, locked;
 	wire reset_n;
 	assign reset_n = ~reset; 
-	// **VGA CLOCK**
+
 	pll_25 pll_25(
 		.refclk(clk),
 		.rst(reset_n),
@@ -59,13 +46,11 @@ module top (
 		.locked(locked)
 	);
 
-	// **VGA MAIN CONTROLLER**
 	vgaHdmi vgaHdmi (
 		// input
 		.clock      (clock25),
 		.clock50    (clk),
 		.reset      (~locked),
-
 		// output
 		.pixelH(x),
 		.pixelV(y),
@@ -73,9 +58,7 @@ module top (
 		.vsync      (HDMI_TX_VS),
 		.dataEnable (HDMI_TX_DE),
 		.vgaClock   (HDMI_TX_CLK),
-	);
-	//------/\---/\---/\---/\---/\---/\---/\---/\---/\---/\	
-	
+	);	
 	
 	render r1	(.clk(clk), .reset(reset), .x(x), .y(y), .video_on(HDMI_TX_DE), .rgb(HDMI_TX_D), .clk_1ms(clk_1ms),
 					.paddle1_on(paddle1_on), .paddle2_on(paddle2_on), .ball_on(ball_on), 
@@ -92,11 +75,9 @@ module top (
 	game_state(.clk(clk), .clk_1ms(clk_1ms), .reset(reset), .p1_score(p1_score), .p2_score(p2_score), .game_state(game_state));
 
 	
-	//------\/---\/---\/---\/---\/---\/---\/---\/---\/---\/
-	// **I2C Interface for ADV7513 initial config**
 	I2C_HDMI_Config #(
-	.CLK_Freq (50000000), // trabajamos con reloj de 50MHz
-	.I2C_Freq (20000)    // reloj de 20kHz for i2c clock
+	.CLK_Freq (50000000), 
+	.I2C_Freq (20000)    
 	)
 
 	I2C_HDMI_Config (
@@ -107,6 +88,5 @@ module top (
 	.HDMI_TX_INT (HDMI_TX_INT),
 	.READY       (READY)
 	);
-	//------/\---/\---/\---/\---/\---/\---/\---/\---/\---/\
 	
 endmodule

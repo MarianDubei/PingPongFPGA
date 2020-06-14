@@ -1,5 +1,3 @@
-
-
 //Make it pretty at the end using variables
 module ball(
 	input clk,clk_1ms,reset,

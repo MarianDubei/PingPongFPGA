@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sun Jun 14 12:48:52 2020
+Sun Jun 14 21:16:16 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun 14 12:48:52 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun 14 21:16:16 2020       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; top                                         ;
 ; Top-level Entity Name           ; top                                         ;
@@ -700,7 +700,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -710,7 +710,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sun Jun 14 12:48:41 2020
+    Info: Processing started: Sun Jun 14 21:15:55 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PingPong -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -718,8 +718,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file src/pll
     Info (12023): Found entity 1: pll_25 File: D:/Downloads/Telegram Desktop/PingPong/src/pll/pll_25.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file src/pll/pll_25/pll_25_0002.v
     Info (12023): Found entity 1: pll_25_0002 File: D:/Downloads/Telegram Desktop/PingPong/src/pll/pll_25/pll_25_0002.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file src/vga_sync.v
-    Info (12023): Found entity 1: vga_sync File: D:/Downloads/Telegram Desktop/PingPong/src/vga_sync.v Line: 2
 Warning (10275): Verilog HDL Module Instantiation warning at top.v(76): ignored dangling comma in List of Port Connections File: D:/Downloads/Telegram Desktop/PingPong/src/top.v Line: 76
 Info (12021): Found 5 design units, including 5 entities, in source file src/top.v
     Info (12023): Found entity 1: vgaHdmi File: D:/Downloads/Telegram Desktop/PingPong/src/vgaHdmi.v Line: 21
@@ -727,8 +725,6 @@ Info (12021): Found 5 design units, including 5 entities, in source file src/top
     Info (12023): Found entity 3: I2C_Controller File: D:/Downloads/Telegram Desktop/PingPong/src/i2c/I2C_Controller.v Line: 58
     Info (12023): Found entity 4: I2C_HDMI_Config File: D:/Downloads/Telegram Desktop/PingPong/src/i2c/I2C_HDMI_Config.v Line: 17
     Info (12023): Found entity 5: top File: D:/Downloads/Telegram Desktop/PingPong/src/top.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file src/seven_seg.v
-    Info (12023): Found entity 1: seven_seg File: D:/Downloads/Telegram Desktop/PingPong/src/seven_seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/render.v
     Info (12023): Found entity 1: render File: D:/Downloads/Telegram Desktop/PingPong/src/render.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file src/paddle.v
@@ -851,10 +847,10 @@ Info (21057): Implemented 572 device resources after synthesis - the final resou
     Info (21061): Implemented 529 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4842 megabytes
-    Info: Processing ended: Sun Jun 14 12:48:52 2020
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Sun Jun 14 21:16:16 2020
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +------------------------------------------+

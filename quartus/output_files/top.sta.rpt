@@ -1,5 +1,5 @@
 Timing Analyzer report for top
-Sun Jun 14 12:49:55 2020
+Sun Jun 14 21:18:22 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -101,14 +101,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.19        ;
+; Average used               ; 1.17        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.3%      ;
-;     Processor 3            ;   6.2%      ;
-;     Processor 4            ;   6.1%      ;
+;     Processor 2            ;   5.8%      ;
+;     Processor 3            ;   5.8%      ;
+;     Processor 4            ;   5.7%      ;
 +----------------------------+-------------+
 
 
@@ -117,7 +117,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; top.sdc       ; OK     ; Sun Jun 14 12:49:49 2020 ;
+; top.sdc       ; OK     ; Sun Jun 14 21:18:08 2020 ;
 +---------------+--------+--------------------------+
 
 
@@ -138,9 +138,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+---------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                ; Note ;
 +------------+-----------------+---------------------------------------------------------------------------+------+
-; 115.89 MHz ; 115.89 MHz      ; clk                                                                       ;      ;
-; 166.56 MHz ; 166.56 MHz      ; i2c_20k_clock                                                             ;      ;
-; 169.12 MHz ; 169.12 MHz      ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 112.37 MHz ; 112.37 MHz      ; clk                                                                       ;      ;
+; 179.12 MHz ; 179.12 MHz      ; i2c_20k_clock                                                             ;      ;
+; 194.29 MHz ; 194.29 MHz      ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
 +------------+-----------------+---------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -156,9 +156,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------+-----------+---------------+
 ; Clock                                                                     ; Slack     ; End Point TNS ;
 +---------------------------------------------------------------------------+-----------+---------------+
-; clk                                                                       ; 7.742     ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 34.087    ; 0.000         ;
-; i2c_20k_clock                                                             ; 49993.996 ; 0.000         ;
+; clk                                                                       ; 7.306     ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 34.853    ; 0.000         ;
+; i2c_20k_clock                                                             ; 49994.417 ; 0.000         ;
 +---------------------------------------------------------------------------+-----------+---------------+
 
 
@@ -167,9 +167,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; clk                                                                       ; 0.279 ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.465 ; 0.000         ;
-; i2c_20k_clock                                                             ; 0.526 ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.404 ; 0.000         ;
+; clk                                                                       ; 0.437 ; 0.000         ;
+; i2c_20k_clock                                                             ; 0.441 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -191,9 +191,9 @@ No paths to report.
 ; Clock                                                                     ; Slack     ; End Point TNS ;
 +---------------------------------------------------------------------------+-----------+---------------+
 ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666     ; 0.000         ;
-; clk                                                                       ; 8.938     ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.273    ; 0.000         ;
-; i2c_20k_clock                                                             ; 24999.230 ; 0.000         ;
+; clk                                                                       ; 8.918     ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.265    ; 0.000         ;
+; i2c_20k_clock                                                             ; 24999.249 ; 0.000         ;
 +---------------------------------------------------------------------------+-----------+---------------+
 
 
@@ -208,9 +208,9 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                ; Note ;
 +------------+-----------------+---------------------------------------------------------------------------+------+
-; 115.31 MHz ; 115.31 MHz      ; clk                                                                       ;      ;
-; 166.5 MHz  ; 166.5 MHz       ; i2c_20k_clock                                                             ;      ;
-; 174.46 MHz ; 174.46 MHz      ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 111.97 MHz ; 111.97 MHz      ; clk                                                                       ;      ;
+; 178.25 MHz ; 178.25 MHz      ; i2c_20k_clock                                                             ;      ;
+; 198.22 MHz ; 198.22 MHz      ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
 +------------+-----------------+---------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -220,9 +220,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+-----------+---------------+
 ; Clock                                                                     ; Slack     ; End Point TNS ;
 +---------------------------------------------------------------------------+-----------+---------------+
-; clk                                                                       ; 7.802     ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 34.268    ; 0.000         ;
-; i2c_20k_clock                                                             ; 49993.994 ; 0.000         ;
+; clk                                                                       ; 7.565     ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 34.955    ; 0.000         ;
+; i2c_20k_clock                                                             ; 49994.390 ; 0.000         ;
 +---------------------------------------------------------------------------+-----------+---------------+
 
 
@@ -231,9 +231,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; clk                                                                       ; 0.265 ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.527 ; 0.000         ;
-; i2c_20k_clock                                                             ; 0.587 ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.379 ; 0.000         ;
+; i2c_20k_clock                                                             ; 0.418 ; 0.000         ;
+; clk                                                                       ; 0.457 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -255,9 +255,9 @@ No paths to report.
 ; Clock                                                                     ; Slack     ; End Point TNS ;
 +---------------------------------------------------------------------------+-----------+---------------+
 ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666     ; 0.000         ;
-; clk                                                                       ; 8.967     ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.201    ; 0.000         ;
-; i2c_20k_clock                                                             ; 24999.244 ; 0.000         ;
+; clk                                                                       ; 8.945     ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.196    ; 0.000         ;
+; i2c_20k_clock                                                             ; 24999.266 ; 0.000         ;
 +---------------------------------------------------------------------------+-----------+---------------+
 
 
@@ -272,9 +272,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------+-----------+---------------+
 ; Clock                                                                     ; Slack     ; End Point TNS ;
 +---------------------------------------------------------------------------+-----------+---------------+
-; clk                                                                       ; 13.547    ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 36.586    ; 0.000         ;
-; i2c_20k_clock                                                             ; 49996.493 ; 0.000         ;
+; clk                                                                       ; 13.150    ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 37.293    ; 0.000         ;
+; i2c_20k_clock                                                             ; 49996.570 ; 0.000         ;
 +---------------------------------------------------------------------------+-----------+---------------+
 
 
@@ -283,9 +283,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; clk                                                                       ; 0.143 ; 0.000         ;
-; i2c_20k_clock                                                             ; 0.166 ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.185 ; 0.000         ;
+; i2c_20k_clock                                                             ; 0.158 ; 0.000         ;
+; clk                                                                       ; 0.189 ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.199 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -307,9 +307,9 @@ No paths to report.
 ; Clock                                                                     ; Slack     ; End Point TNS ;
 +---------------------------------------------------------------------------+-----------+---------------+
 ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666     ; 0.000         ;
-; clk                                                                       ; 9.010     ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.556    ; 0.000         ;
-; i2c_20k_clock                                                             ; 24999.556 ; 0.000         ;
+; clk                                                                       ; 9.002     ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.555    ; 0.000         ;
+; i2c_20k_clock                                                             ; 24999.561 ; 0.000         ;
 +---------------------------------------------------------------------------+-----------+---------------+
 
 
@@ -324,9 +324,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------+-----------+---------------+
 ; Clock                                                                     ; Slack     ; End Point TNS ;
 +---------------------------------------------------------------------------+-----------+---------------+
-; clk                                                                       ; 14.200    ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 37.159    ; 0.000         ;
-; i2c_20k_clock                                                             ; 49996.963 ; 0.000         ;
+; clk                                                                       ; 13.935    ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 37.674    ; 0.000         ;
+; i2c_20k_clock                                                             ; 49997.080 ; 0.000         ;
 +---------------------------------------------------------------------------+-----------+---------------+
 
 
@@ -335,9 +335,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                     ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------+-------+---------------+
-; clk                                                                       ; 0.125 ; 0.000         ;
-; i2c_20k_clock                                                             ; 0.142 ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.175 ; 0.000         ;
+; i2c_20k_clock                                                             ; 0.116 ; 0.000         ;
+; clk                                                                       ; 0.178 ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.180 ; 0.000         ;
 +---------------------------------------------------------------------------+-------+---------------+
 
 
@@ -359,9 +359,9 @@ No paths to report.
 ; Clock                                                                     ; Slack     ; End Point TNS ;
 +---------------------------------------------------------------------------+-----------+---------------+
 ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666     ; 0.000         ;
-; clk                                                                       ; 9.046     ; 0.000         ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.548    ; 0.000         ;
-; i2c_20k_clock                                                             ; 24999.589 ; 0.000         ;
+; clk                                                                       ; 9.044     ; 0.000         ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.547    ; 0.000         ;
+; i2c_20k_clock                                                             ; 24999.597 ; 0.000         ;
 +---------------------------------------------------------------------------+-----------+---------------+
 
 
@@ -376,11 +376,11 @@ No synchronizer chains to report.
 +----------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
 ; Clock                                                                      ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                                           ; 7.742     ; 0.125 ; N/A      ; N/A     ; 1.666               ;
-;  clk                                                                       ; 7.742     ; 0.125 ; N/A      ; N/A     ; 8.938               ;
-;  i2c_20k_clock                                                             ; 49993.994 ; 0.142 ; N/A      ; N/A     ; 24999.230           ;
+; Worst-case Slack                                                           ; 7.306     ; 0.116 ; N/A      ; N/A     ; 1.666               ;
+;  clk                                                                       ; 7.306     ; 0.178 ; N/A      ; N/A     ; 8.918               ;
+;  i2c_20k_clock                                                             ; 49994.390 ; 0.116 ; N/A      ; N/A     ; 24999.249           ;
 ;  pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A   ; N/A      ; N/A     ; 1.666               ;
-;  pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 34.087    ; 0.175 ; N/A      ; N/A     ; 19.201              ;
+;  pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 34.853    ; 0.180 ; N/A      ; N/A     ; 19.196              ;
 ; Design-wide TNS                                                            ; 0.0       ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  clk                                                                       ; 0.000     ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 ;  i2c_20k_clock                                                             ; 0.000     ; 0.000 ; N/A      ; N/A     ; 0.000               ;
@@ -625,11 +625,11 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                ; To Clock                                                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
-; clk                                                                       ; clk                                                                       ; 1729     ; 0        ; 0        ; 0        ;
+; clk                                                                       ; clk                                                                       ; 1949     ; 0        ; 0        ; 0        ;
 ; i2c_20k_clock                                                             ; clk                                                                       ; 1        ; 1        ; 0        ; 0        ;
 ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; clk                                                                       ; 416      ; 0        ; 0        ; 0        ;
-; i2c_20k_clock                                                             ; i2c_20k_clock                                                             ; 810      ; 0        ; 0        ; 0        ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 591      ; 0        ; 0        ; 0        ;
+; i2c_20k_clock                                                             ; i2c_20k_clock                                                             ; 821      ; 0        ; 0        ; 0        ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 638      ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -639,11 +639,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                ; To Clock                                                                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
-; clk                                                                       ; clk                                                                       ; 1729     ; 0        ; 0        ; 0        ;
+; clk                                                                       ; clk                                                                       ; 1949     ; 0        ; 0        ; 0        ;
 ; i2c_20k_clock                                                             ; clk                                                                       ; 1        ; 1        ; 0        ; 0        ;
 ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; clk                                                                       ; 416      ; 0        ; 0        ; 0        ;
-; i2c_20k_clock                                                             ; i2c_20k_clock                                                             ; 810      ; 0        ; 0        ; 0        ;
-; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 591      ; 0        ; 0        ; 0        ;
+; i2c_20k_clock                                                             ; i2c_20k_clock                                                             ; 821      ; 0        ; 0        ; 0        ;
+; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 638      ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------+---------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -668,7 +668,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 1     ; 1    ;
 ; Unconstrained Input Ports       ; 7     ; 7    ;
-; Unconstrained Input Port Paths  ; 191   ; 191  ;
+; Unconstrained Input Port Paths  ; 195   ; 195  ;
 ; Unconstrained Output Ports      ; 31    ; 31   ;
 ; Unconstrained Output Port Paths ; 55    ; 55   ;
 +---------------------------------+-------+------+
@@ -801,7 +801,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sun Jun 14 12:49:47 2020
+    Info: Processing started: Sun Jun 14 21:18:05 2020
 Info: Command: quartus_sta PingPong -c top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -814,7 +814,7 @@ Info (332110): Deriving PLL clocks
     Info (332110): create_generated_clock -source {pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 12 -duty_cycle 50.00 -name {pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk} {pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Warning (332060): Node: clock_divider:c1|clk_1ms was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register paddle:p1|y_paddle2[9] is being clocked by clock_divider:c1|clk_1ms
+    Info (13166): Register ball:b1|p1_score[3] is being clocked by clock_divider:c1|clk_1ms
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
@@ -822,124 +822,124 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 100C Model
-Info (332146): Worst-case setup slack is 7.742
+Info (332146): Worst-case setup slack is 7.306
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.742               0.000 clk 
-    Info (332119):    34.087               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119): 49993.996               0.000 i2c_20k_clock 
-Info (332146): Worst-case hold slack is 0.279
+    Info (332119):     7.306               0.000 clk 
+    Info (332119):    34.853               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119): 49994.417               0.000 i2c_20k_clock 
+Info (332146): Worst-case hold slack is 0.404
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.279               0.000 clk 
-    Info (332119):     0.465               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.526               0.000 i2c_20k_clock 
+    Info (332119):     0.404               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.437               0.000 clk 
+    Info (332119):     0.441               0.000 i2c_20k_clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 1.666
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     1.666               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.938               0.000 clk 
-    Info (332119):    19.273               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119): 24999.230               0.000 i2c_20k_clock 
+    Info (332119):     8.918               0.000 clk 
+    Info (332119):    19.265               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119): 24999.249               0.000 i2c_20k_clock 
 Info: Analyzing Slow 1100mV -40C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Warning (332060): Node: clock_divider:c1|clk_1ms was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register paddle:p1|y_paddle2[9] is being clocked by clock_divider:c1|clk_1ms
+    Info (13166): Register ball:b1|p1_score[3] is being clocked by clock_divider:c1|clk_1ms
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 7.802
+Info (332146): Worst-case setup slack is 7.565
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.802               0.000 clk 
-    Info (332119):    34.268               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119): 49993.994               0.000 i2c_20k_clock 
-Info (332146): Worst-case hold slack is 0.265
+    Info (332119):     7.565               0.000 clk 
+    Info (332119):    34.955               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119): 49994.390               0.000 i2c_20k_clock 
+Info (332146): Worst-case hold slack is 0.379
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.265               0.000 clk 
-    Info (332119):     0.527               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.587               0.000 i2c_20k_clock 
+    Info (332119):     0.379               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.418               0.000 i2c_20k_clock 
+    Info (332119):     0.457               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 1.666
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     1.666               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.967               0.000 clk 
-    Info (332119):    19.201               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119): 24999.244               0.000 i2c_20k_clock 
+    Info (332119):     8.945               0.000 clk 
+    Info (332119):    19.196               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119): 24999.266               0.000 i2c_20k_clock 
 Info: Analyzing Fast 1100mV 100C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Warning (332060): Node: clock_divider:c1|clk_1ms was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register paddle:p1|y_paddle2[9] is being clocked by clock_divider:c1|clk_1ms
+    Info (13166): Register ball:b1|p1_score[3] is being clocked by clock_divider:c1|clk_1ms
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 13.547
+Info (332146): Worst-case setup slack is 13.150
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    13.547               0.000 clk 
-    Info (332119):    36.586               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119): 49996.493               0.000 i2c_20k_clock 
-Info (332146): Worst-case hold slack is 0.143
+    Info (332119):    13.150               0.000 clk 
+    Info (332119):    37.293               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119): 49996.570               0.000 i2c_20k_clock 
+Info (332146): Worst-case hold slack is 0.158
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.143               0.000 clk 
-    Info (332119):     0.166               0.000 i2c_20k_clock 
-    Info (332119):     0.185               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.158               0.000 i2c_20k_clock 
+    Info (332119):     0.189               0.000 clk 
+    Info (332119):     0.199               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 1.666
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     1.666               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     9.010               0.000 clk 
-    Info (332119):    19.556               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119): 24999.556               0.000 i2c_20k_clock 
+    Info (332119):     9.002               0.000 clk 
+    Info (332119):    19.555               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119): 24999.561               0.000 i2c_20k_clock 
 Info: Analyzing Fast 1100mV -40C Model
 Warning (332060): Node: clock_divider:c1|clk_1ms was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register paddle:p1|y_paddle2[9] is being clocked by clock_divider:c1|clk_1ms
+    Info (13166): Register ball:b1|p1_score[3] is being clocked by clock_divider:c1|clk_1ms
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 14.200
+Info (332146): Worst-case setup slack is 13.935
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.200               0.000 clk 
-    Info (332119):    37.159               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119): 49996.963               0.000 i2c_20k_clock 
-Info (332146): Worst-case hold slack is 0.125
+    Info (332119):    13.935               0.000 clk 
+    Info (332119):    37.674               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119): 49997.080               0.000 i2c_20k_clock 
+Info (332146): Worst-case hold slack is 0.116
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.125               0.000 clk 
-    Info (332119):     0.142               0.000 i2c_20k_clock 
-    Info (332119):     0.175               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.116               0.000 i2c_20k_clock 
+    Info (332119):     0.178               0.000 clk 
+    Info (332119):     0.180               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 1.666
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     1.666               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     9.046               0.000 clk 
-    Info (332119):    19.548               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119): 24999.589               0.000 i2c_20k_clock 
+    Info (332119):     9.044               0.000 clk 
+    Info (332119):    19.547               0.000 pll_25|pll_25_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119): 24999.597               0.000 i2c_20k_clock 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5242 megabytes
-    Info: Processing ended: Sun Jun 14 12:49:55 2020
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 5243 megabytes
+    Info: Processing ended: Sun Jun 14 21:18:22 2020
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:17
 
 
