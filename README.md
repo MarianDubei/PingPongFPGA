@@ -13,7 +13,7 @@ This project implements 1972 game Pong using FPGA Board Terasic DE10-Nano. The g
 
 * Quartus Prime Lite
 
-## Demo
+## Video
 
 https://www.youtube.com/watch?v=JfQlLHnXPLQ
 
